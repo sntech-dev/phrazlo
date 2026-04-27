@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNTech — Mobile Apps for Everyday Life</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #3a3a3a;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #534BAE;
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 24px;
+            text-decoration: none;
+            color: #3a3a3a;
+            font-size: 14px;
+        }
+
+        nav a:hover { color: #534BAE; }
+
+        .hero {
+            text-align: center;
+            padding: 80px 40px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #3a3a3a;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span { color: #534BAE; }
+
+        .hero p {
+            font-size: 18px;
+            color: #9f9f9f;
+            margin-bottom: 40px;
+        }
+
+        .apps-section {
+            padding: 60px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .apps-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .app-card {
+            border: 1px solid #efefef;
+            border-radius: 16px;
+            padding: 28px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .app-card:hover { border-color: #534BAE; }
+
+        .app-icon {
+            width: 56px;
+            height: 56px;
+            background: #534BAE;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .app-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .app-card p {
+            font-size: 14px;
+            color: #9f9f9f;
+            line-height: 1.5;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: #EEEDFE;
+            color: #534BAE;
+            font-weight: 500;
+        }
+
+        .values-section {
+            background: #f9f9f9;
+            padding: 60px 40px;
+        }
+
+        .values-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .values-inner h2 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .value-emoji { font-size: 32px; margin-bottom: 12px; }
+
+        .value-item h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .value-item p {
+            font-size: 14px;
+            color: #9f9f9f;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #9f9f9f;
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: #534BAE;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 16px 20px; }
+            .hero { padding: 60px 20px; }
+            .hero h1 { font-size: 28px; }
+            .apps-section { padding: 40px 20px; }
+            footer { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/" class="logo">SNTech</a>
+    <nav>
+        <a href="/sntech.dev/apps">Apps</a>
+        <a href="/sntech.dev/support">Support</a>
+        <a href="/sntech.dev/privacy-policy">Privacy</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Apps that make<br><span>everyday life easier</span></h1>
+    <p>We build clean, focused mobile apps for Android. Simple to use, powerful under the hood.</p>
+</section>
+
+<section class="apps-section">
+    <h2>Our Apps</h2>
+    <div class="app-grid">
+        <a href="/sntech.dev/phrazlo" class="app-card">
+            <div class="app-icon">✍️</div>
+            <h3>Phrazlo</h3>
+            <p>AI writing assistant — rewrite, summarise, fix grammar, and change tone instantly.</p>
+            <span class="badge">Available on Android</span>
+        </a>
+        <!-- Add more app cards here as you publish more apps -->
+    </div>
+</section>
+
+<section class="values-section">
+    <div class="values-inner">
+        <h2>What we stand for</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <div class="value-emoji">🎯</div>
+                <h3>Focused</h3>
+                <p>Every app does one thing exceptionally well.</p>
+            </div>
+            <div class="value-item">
+                <div class="value-emoji">🔒</div>
+                <h3>Private</h3>
+                <p>We collect only what we need and nothing more.</p>
+            </div>
+            <div class="value-item">
+                <div class="value-emoji">⚡</div>
+                <h3>Fast</h3>
+                <p>Built for performance on every Android device.</p>
+            </div>
+            <div class="value-item">
+                <div class="value-emoji">💬</div>
+                <h3>Supported</h3>
+                <p>Real human support for every user question.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 SNTech. All rights reserved.</p>
+    <div>
+        <a href="/sntech.dev/privacy-policy">Privacy Policy</a>
+        <a href="/sntech.dev/terms">Terms of Use</a>
+        <a href="/sntech.dev/support">Support</a>
+        <a href="mailto:support@sntech.dev">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>
