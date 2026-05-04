@@ -3,7 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNTech — Mobile Apps for Everyday Life</title>
+
+    <!-- ═══════════════════════════════════════════
+         PRIMARY SEO META TAGS
+    ═══════════════════════════════════════════ -->
+    <title>SNTech — Android Apps for Everyday Life</title>
+    <meta name="description" content="SNTech builds clean, focused Android apps. Discover Phrazlo — the AI writing assistant that rewrites, summarises, and fixes grammar instantly. Free to download.">
+    <meta name="keywords" content="SNTech, Android apps, mobile apps, AI writing assistant, Phrazlo, Google Play apps, utility apps for Android">
+    <meta name="author" content="SNTech">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://sntech.dev/" />
+
+    <!-- ═══════════════════════════════════════════
+         OPEN GRAPH (Facebook, LinkedIn, WhatsApp)
+    ═══════════════════════════════════════════ -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SNTech">
+    <meta property="og:title" content="SNTech — Android Apps for Everyday Life">
+    <meta property="og:description" content="We build clean, focused Android apps. Simple to use, powerful under the hood. Discover Phrazlo — the free AI writing assistant on Google Play.">
+    <meta property="og:url" content="https://sntech.dev/">
+    <meta property="og:image" content="https://sntech.dev/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="SNTech — Android Apps for Everyday Life">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- ═══════════════════════════════════════════
+         TWITTER / X CARD
+    ═══════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SNTech — Android Apps for Everyday Life">
+    <meta name="twitter:description" content="We build clean, focused Android apps. Discover Phrazlo — the free AI writing assistant on Google Play.">
+    <meta name="twitter:image" content="https://sntech.dev/assets/og-image.png">
+    <meta name="twitter:image:alt" content="SNTech — Android Apps for Everyday Life">
+
+    <!-- ═══════════════════════════════════════════
+         FAVICON & ICONS
+    ═══════════════════════════════════════════ -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- ═══════════════════════════════════════════
+         PERFORMANCE: PRECONNECT
+    ═══════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://play.google.com">
+    <link rel="dns-prefetch" href="https://play.google.com">
+
+    <!-- ═══════════════════════════════════════════
+         STRUCTURED DATA — Organization (JSON-LD)
+         Tells Google who SNTech is as an entity.
+    ═══════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SNTech",
+      "url": "https://sntech.dev",
+      "logo": "https://sntech.dev/assets/logo.png",
+      "description": "SNTech builds clean, focused Android apps for everyday life.",
+      "email": "snapps.connect@gmail.com",
+      "sameAs": [
+        "https://play.google.com/store/apps/developer?id=SNTech"
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════
+         STRUCTURED DATA — WebSite + Sitelinks
+         Enables the Google search box sitelink.
+    ═══════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SNTech",
+      "url": "https://sntech.dev",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://sntech.dev/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════
+         STRUCTURED DATA — ItemList of Apps
+         Helps Google understand your app catalogue.
+    ═══════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "SNTech Android Apps",
+      "description": "Android apps published by SNTech on Google Play",
+      "url": "https://sntech.dev",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Phrazlo — AI Writing Assistant",
+          "url": "https://sntech.dev/phrazlo",
+          "description": "AI writing assistant for Android — rewrite, summarise, fix grammar, and change tone instantly. Free to download on Google Play."
+        }
+      ]
+    }
+    </script>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -154,7 +262,11 @@
             padding: 24px;
         }
 
-        .value-emoji { font-size: 32px; margin-bottom: 12px; }
+        .value-emoji {
+            font-size: 32px;
+            margin-bottom: 12px;
+            /* Use aria-hidden on decorative emoji in HTML below */
+        }
 
         .value-item h3 {
             font-size: 16px;
@@ -197,69 +309,78 @@
 </head>
 <body>
 
-<header>
-    <a href="/" class="logo">SNTech</a>
-    <nav>
-        <!--<a href="/apps">Apps</a>-->
+<!-- ── Semantic landmark: site header ── -->
+<header role="banner">
+    <a href="/" class="logo" aria-label="SNTech Home">SNTech</a>
+    <nav aria-label="Main navigation">
         <a href="/support">Support</a>
         <a href="/privacy-policy">Privacy</a>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Apps that make<br><span>everyday life easier</span></h1>
-    <p>We build clean, focused mobile apps for Android. Simple to use, powerful under the hood.</p>
-</section>
+<!-- ── Main content ── -->
+<main id="main-content">
 
-<section class="apps-section">
-    <h2>Our Apps</h2>
-    <div class="app-grid">
-        <a href="/phrazlo" class="app-card">
-            <div class="app-icon">✍️</div>
-            <h3>Phrazlo</h3>
-            <p>AI writing assistant — rewrite, summarise, fix grammar, and change tone instantly.</p>
-            <span class="badge">Available on Android</span>
-        </a>
-        <!-- Add more app cards here as you publish more apps -->
-    </div>
-</section>
+    <!-- Hero: Primary keyword-rich H1 -->
+    <section class="hero" aria-labelledby="hero-heading">
+        <h1 id="hero-heading">Apps that make<br><span>everyday life easier</span></h1>
+        <p>We build clean, focused Android apps. Simple to use, powerful under the hood.</p>
+    </section>
 
-<section class="values-section">
-    <div class="values-inner">
-        <h2>What we stand for</h2>
-        <div class="values-grid">
-            <div class="value-item">
-                <div class="value-emoji">🎯</div>
-                <h3>Focused</h3>
-                <p>Every app does one thing exceptionally well.</p>
-            </div>
-            <div class="value-item">
-                <div class="value-emoji">🔒</div>
-                <h3>Private</h3>
-                <p>We collect only what we need and nothing more.</p>
-            </div>
-            <div class="value-item">
-                <div class="value-emoji">⚡</div>
-                <h3>Fast</h3>
-                <p>Built for performance on every Android device.</p>
-            </div>
-            <div class="value-item">
-                <div class="value-emoji">💬</div>
-                <h3>Supported</h3>
-                <p>Real human support for every user question.</p>
+    <!-- App catalogue -->
+    <section class="apps-section" aria-labelledby="apps-heading">
+        <h2 id="apps-heading">Our Apps</h2>
+        <div class="app-grid">
+            <a href="/phrazlo" class="app-card" aria-label="Phrazlo — AI Writing Assistant for Android">
+                <div class="app-icon" aria-hidden="true">✍️</div>
+                <h3>Phrazlo</h3>
+                <p>AI writing assistant — rewrite, summarise, fix grammar, and change tone instantly.</p>
+                <span class="badge">Available on Android</span>
+            </a>
+            <!-- Add more app cards here as you publish more apps -->
+        </div>
+    </section>
+
+    <!-- Values / trust signals -->
+    <section class="values-section" aria-labelledby="values-heading">
+        <div class="values-inner">
+            <h2 id="values-heading">What we stand for</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-emoji" aria-hidden="true">🎯</div>
+                    <h3>Focused</h3>
+                    <p>Every app does one thing exceptionally well.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-emoji" aria-hidden="true">🔒</div>
+                    <h3>Private</h3>
+                    <p>We collect only what we need and nothing more.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-emoji" aria-hidden="true">⚡</div>
+                    <h3>Fast</h3>
+                    <p>Built for performance on every Android device.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-emoji" aria-hidden="true">💬</div>
+                    <h3>Supported</h3>
+                    <p>Real human support for every user question.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
+</main>
+
+<!-- ── Site footer ── -->
+<footer role="contentinfo">
     <p>© 2025 SNTech. All rights reserved.</p>
-    <div>
+    <nav aria-label="Footer navigation">
         <a href="/privacy-policy">Privacy Policy</a>
         <a href="/terms">Terms of Use</a>
         <a href="/support">Support</a>
         <a href="mailto:snapps.connect@gmail.com">Contact</a>
-    </div>
+    </nav>
 </footer>
 
 </body>
